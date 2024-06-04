@@ -1,44 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Enciclopédia Moderna</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
 
-    <div>   
+    <header>
         <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
-
-    <div class="bar"></div>
-
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
-
-        <div class="main">
+            <img src="assets/images/logo.jpeg" width="200" alt="Logo da Enciclopédia Moderna" />
             
         </div>
+        <nav aria-label="Navegação Principal">
+            <h1>ENCICLOPÉDIA MODERNA</h1>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#categories">Categorias</a></li>
+                <li><a href="#articles">Artigos</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <form action="/search" method="get">
+                <label for="search">Pesquisar:</label>
+                <input type="text" id="search" name="query" placeholder="Digite sua pesquisa">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
 
-        <div class="anchors">
+    <nav aria-label="Barra de navegação">
+        <ul class="bar"></ul>
+    </nav>
+
+    <div class="content">
+        <aside>
+            <h2>Tipos de plantas</h2>
+            <ul>
+                <li><a href="#plantas-aquaticas" onclick="mostrarTexto('plantas-aquaticas')">Plantas aquáticas</a></li>
+                <li><a href="#plantas-carnivoras" onclick="mostrarTexto('plantas-carnivoras')">Plantas carnívoras</a></li>
+                <li><a href="#plantas-exoticas" onclick="mostrarTexto('plantas-exoticas')">Plantas exóticas</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <article id="plantas-aquaticas">
+                <h3>Plantas Aquáticas</h3>
+                <p>
+                    Plantas aquáticas são plantas que se adaptaram à vida em ambientes aquáticos (marinhos e dulçaquícolas) ocupando um conjunto de habitats que requerem mecanismos específicos de vida em submersão ou à superfície da água. A adaptação mais comum é a presença de aerênquima, mas a presença de folhas flutuantes e de folhas finamente dissecadas são também comuns. As plantas aquáticas apenas se podem desenvolver em água ou em solo que esteja permanentemente saturado com água, o que as torna dependentes das zonas húmidas, ecossistemas onde são um importante componente do biota. Estas plantas são também frequentemente referidas como hidrófitas ou macrófitas, embora a primeira das designações possa induzir em erro, por ser uma das categorias do sistema de Raunkiær, e a segunda por ser utilizada para algas e para aplicações tecnológicas no campo da engenharia sanitária.
+                </p>
+                <figure>
+                    <img src="/assets/images/nymphaea_alba.jpg" alt="A flor de Nymphaea alba, uma espécie da família Nymphaeaceae (nenúfares).">
+                    <figcaption>A flor de Nymphaea alba, uma espécie da família Nymphaeaceae (nenúfares).</figcaption>
+                </figure>
+            
+            </article>
+
+            <article id="plantas-carnivoras" class="hidden">
+                <h3>Plantas Carnívoras</h3>
+                <p>
+                    Plantas carnívoras ou plantas insetívoras são plantas que possuem a capacidade de atrair pequenos animais, incluindo insetos (principais presas), aracnídeos e até mesmo anfíbios, répteis e aves, capturar (através de armadilhas compostas por folhas modificadas), digerir (através de enzimas digestivas) e utilizar os nutrientes (principalmente compostos nitrogenados) de suas presas. Habitam geralmente solos pobres, encharcados de ácidos (baixo pH) com pouca disponibilidade de nitratos (essenciais para a síntese da molécula de clorofila), dependendo assim do nitrogênio contido nas proteínas dos animais, mas, como todo vegetal, é dependente da energia proveniente da luz para sobreviver.
+                </p>
+                <figure>
+                    <img src="/assets/images/Nepenthes_sibuyanensis_carnivora.jpg" alt="Espécime de Nepenthes sibuyanensis">
+                    <figcaption>Espécime de Nepenthes sibuyanensis</figcaption>
+                </figure>
+            </article>
+
+            <article id="plantas-exoticas" class="hidden">
+                <h3>Plantas Exóticas</h3>
+                <p>
+                    Planta exótica é aquela dada como proveniente de fora da flora original local. Ou seja, uma planta exótica não é autóctone do ambiente nativo. Também diz-se que uma planta exótica é estrangeira, não é indígena.
+                </p>
+                <p>
+                    Em muitos lugares do mundo as plantas exóticas causam desequilíbrios no ecossistema local e são consideradas como espécies invasoras. Em casos extremos chegam a provocar a extinção de espécies animais e vegetais nativos da região aonde elas proliferam.
+                </p>
+                <p>
+                    Melilotus sp., comum nos EUA, tem origem eurasiana. Usada como forragem e em adubação verde. Muitas plantas exóticas foram introduzidas em novos territórios. Inicialmente como plantas ornamentais, para controle de erosão, alimentação, ou exploração florestal. Se uma exótica se tornará uma espécie invasora é raramente entendido no começo. Assim diversas plantas exóticas são comercializadas durante anos até que repentinamente se naturalizam e tornam-se espécies invasoras.
+                </p>
+                <figure>
+                    <img src="/assets/images/nicotiana_obtusifolia_flower_exotica.jpg" alt="Nicotiana obtusifolia, Tabaco, exótica introduzida na Europa de origem americana">
+                    <figcaption>Nicotiana obtusifolia, Tabaco, exótica introduzida na Europa de origem americana</figcaption>
+                </figure>
+            </article>
+            
+
+            <article id="alimentacao" class="hidden">
+                <h3>Alimentação e Medicina</h3>
+                <p>
+                    A alimentação é fundamental para a manutenção da saúde e prevenção de doenças. Na medicina, a nutrição é reconhecida como uma ferramenta poderosa no tratamento de diversas condições, como diabetes, hipertensão e obesidade. Uma dieta balanceada, rica em frutas, legumes, grãos integrais e proteínas magras, fornece os nutrientes essenciais para o funcionamento adequado do organismo. Além disso, a ingestão de alimentos com propriedades anti-inflamatórias pode ajudar a reduzir o risco de doenças crônicas. Médicos e nutricionistas trabalham juntos para criar planos alimentares personalizados que atendem às necessidades individuais dos pacientes. A conscientização sobre a importância da alimentação saudável é crucial para a promoção de uma vida longa e de qualidade.
+                </p>
+                <figure>
+                    <img src="/assets/images/alimentacao.jpg" alt="Medicina culinária: alimentação que visa saúde e bem-estar">
+                    <figcaption>Medicina culinária: alimentação que visa saúde e bem-estar</figcaption>
+                </figure>
+            </article>
+
+            <article id="ornamentacao" class="hidden">
+                <h3>Ornamentação</h3>
+                <p>
+                    A ornamentação de plantas é uma prática que transforma ambientes, conferindo beleza e harmonia a espaços internos e externos. Utilizando uma variedade de espécies, desde pequenas suculentas até árvores de grande porte, é possível criar arranjos que realçam a decoração e trazem a natureza para mais perto. Plantas ornamentais, como as orquídeas, bromélias e samambaias, são populares por suas cores vibrantes e formas exóticas, tornando-se elementos centrais em jardins e interiores. Além de embelezar, elas melhoram a qualidade do ar e promovem bem-estar. O paisagismo, técnica que integra design e botânica, planeja a distribuição das plantas para criar cenários encantadores e funcionais. Manter as plantas bem cuidadas, com regas adequadas e podas regulares, garante que elas permaneçam vistosas e saudáveis, realçando ainda mais a estética do ambiente.
+                </p>
+                <figure>
+                    <img src="/assets/images/ornamentacao.jpg" alt="25 exemplos de plantas ornamentais para inserir no paisagismo">
+                    <figcaption>25 exemplos de plantas ornamentais para inserir no paisagismo</figcaption>
+                </figure>
+            </article>
+
+            <article id="exploracao" class="hidden">
+                <h3>Exploração Florestal</h3>
+                <p>
+                    A exploração florestal envolve a extração de recursos naturais das florestas, como madeira, resinas e outros produtos vegetais, para diversos usos comerciais. Embora essencial para a economia de muitos países, essa prática deve ser realizada de maneira sustentável para preservar os ecossistemas e a biodiversidade. Métodos de manejo florestal sustentável incluem a seleção cuidadosa das árvores a serem cortadas, a replantação de espécies nativas e a proteção de áreas de conservação. O desmatamento descontrolado, por outro lado, pode levar à degradação ambiental, perda de habitat e mudanças climáticas. Tecnologias modernas e políticas regulatórias são fundamentais para equilibrar a exploração econômica com a preservação ambiental. A conscientização e a participação das comunidades locais também são cruciais para o sucesso das iniciativas de manejo florestal sustentável. A exploração florestal responsável assegura que as futuras gerações possam continuar a usufruir dos benefícios das florestas.
+                </p>
+                <figure>
+                    <img src="/assets/images/exploracao.webp" alt="Exploração florestal é a extração de recursos de uma área florestada.">
+                    <figcaption>Exploração florestal é a extração de recursos de uma área florestada.</figcaption>
+                </figure>
+            </article>
+        </main>
+
+        <nav aria-label="Conteúdos do artigo">
             <h2>Neste Artigo</h2>
             <ul>
-                <li><a href="#">Âncoras</a></li>
+                <li><a href="#alimentacao" onclick="mostrarTexto('alimentacao')">Alimentação e Medicina</a></li>
+                <li><a href="#ornamentacao" onclick="mostrarTexto('ornamentacao')">Ornamentação</a></li>
+                <li><a href="#exploracao" onclick="mostrarTexto('exploracao')">Exploração florestal</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 
-    <div class="footer">
+   
 
+    <script>
+        function mostrarTexto(id) {
+            // Esconde todos os artigos
+            var artigos = document.querySelectorAll('main article');
+            artigos.forEach(function(artigo) {
+                artigo.classList.add('hidden');
+            });
+
+            // Mostra apenas o artigo correspondente ao ID
+            var artigo = document.getElementById(id);
+            artigo.classList.remove('hidden');
+        }
+    </script>
+
+<footer>
+    <div class="footer-links">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#categories">Categorias</a></li>
+            <li><a href="#articles">Artigos</a></li>
+            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#privacy">Política de Privacidade</a></li>
+            <li><a href="#terms">Termos de Uso</a></li>
+        </ul>
     </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+       <a href="https://www.instagram.com" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="assets/images/youtube.png" alt="Youtube"></a>
+    </div>
+    <p>&copy; 2024 Enciclopédia Moderna. Todos os direitos reservados.</p>
+</footer>
 </body>
+
 </html>
